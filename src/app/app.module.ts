@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AccountService } from './account.service';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './account/new-account/new-account.component';
 
@@ -15,7 +16,9 @@ import { LoggingService } from './logging.service';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    LoggingService,
+    AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
